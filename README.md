@@ -1,11 +1,11 @@
 # heroku-buildpack-cleanup
 
-Remove files that are specified in a .slugcleanup file.
+Remove files that are specified in a `.slugcleanup` file.
 
 ## Rationale
 
-> While this may seem to duplicate functionality provided by Heroku's
-> `.slugignore`, there is a key difference: `.slugignore`'d files are
+> While this may seem to duplicate functionality provided by [Heroku's
+> `.slugignore`](https://devcenter.heroku.com/articles/slug-compiler#ignoring-files-with-slugignore), there is a key difference: `.slugignore`'d files are
 > removed after the repo is cloned, but before any buildpack is run. They
 > can therefore not be involved in the build process itself.
 > 
@@ -19,6 +19,11 @@ Remove files that are specified in a .slugcleanup file.
 > and not required to run the app, but then remain part of the slug.
 > 
 > https://github.com/Lostmyname/heroku-buildpack-post-build-clean?tab=readme-ov-file#rationale
+
+Additional context:
+- https://github.com/goodshuffle/goodshuffle/pull/3345
+- https://goodshuffle.atlassian.net/browse/GSPRO-12436
+- https://devcenter.heroku.com/articles/slug-compiler
 
 ## Usage
 
