@@ -2,7 +2,19 @@
 
 echo "-----> Found a .slugcleanup"
 
+pwd
+echo "${pwd}"
+
 cd $1
+
+pwd
+echo "${pwd}"
+
+du -h --max-depth=2
+
+echo "-----"
+
+du -h --max-depth=2 | sort -hr
 
 cat .slugcleanup | xargs -I {} bash -c 'rm -rf {}'
 rm .slugcleanup
