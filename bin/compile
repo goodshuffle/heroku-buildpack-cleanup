@@ -10,11 +10,11 @@ cd $1
 pwd
 echo "${pwd}"
 
-du -h --max-depth=2
+# du -h --max-depth=2
+# echo "-----"
+# du -h --max-depth=2 | sort -hr
 
-echo "-----"
-
-du -h --max-depth=2 | sort -hr
+du -hs $(ls -A) | sort -hr
 
 cat .slugcleanup | xargs -I {} bash -c 'rm -rf {}'
 rm .slugcleanup
