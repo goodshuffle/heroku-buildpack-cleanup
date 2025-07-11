@@ -13,6 +13,11 @@ echo "${pwd}"
 # du -h --max-depth=2
 # echo "-----"
 # du -h --max-depth=2 | sort -hr
+echo "-----"
+
+du -h --max-depth=1 $(ls -A) | sort -hr
+
+echo "-----"
 
 du -hs $(ls -A) | sort -hr
 
