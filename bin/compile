@@ -16,5 +16,9 @@ echo "${pwd}"
 
 du -hs $(ls -A) | sort -hr
 
+echo "-----"
+
+cat .slugcleanup
+
 cat .slugcleanup | xargs -I {} bash -c 'rm -rf {}'
 rm .slugcleanup
